@@ -259,6 +259,31 @@ bool PlayScene::touchIt(Touch* touch,Event* event){
                
             }
             refreshScore();
+
+            bool isWillEnd = true;
+                        for (int i = 0; i<5; i++) {
+                            if (colorCount[i] > 1) {
+                                isWillEnd = false;
+                            }
+                        }
+                        if (isWillEnd) {
+                            selectedBalls.clear();
+                            for (int i = 0; i<ballList.size(); i++) {
+                                selectedBalls.pushBack(ballList.at(i));
+                            }
+                            //动态消除剩余球球
+                            for (int i = 0; i<selectedBalls.size(); i++) {
+                                //deleteBall(ballList);
+                                deleteBall(selectedBalls.at(i));
+                                defen = defen +5;
+                                refreshScore();
+                            }
+
+                            refreshRate();
+                            break;
+                        }
+
+
             if ((ballList.size()<1) ) {
                 //log("结束游戏！");
                 refreshRate();
