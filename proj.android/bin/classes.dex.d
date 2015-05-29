@@ -3,6 +3,8 @@
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/BuildConfig.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/R$attr.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/R$drawable.class \
+/Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/R$id.class \
+/Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/R$layout.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/R$string.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/com/tangxin/MyPhysicalBall/R.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/org/cocos2dx/cpp/AppActivity.class \
@@ -90,4 +92,5 @@
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/org/cocos2dx/lib/GameControllerDelegate$ControllerEventListener.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/org/cocos2dx/lib/GameControllerDelegate.class \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/classes/org/cocos2dx/lib/GameControllerUtils.class \
+/Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/dexedLibs/libPluginProtocol-d91143d99840a856c752439d39b7fe73.jar \
 /Users/tangxin/Documents/CocosProjects/AndroidMyPhysicalBall/proj.android/bin/dexedLibs/annotations-83c75cc18c2ebcc8df05cfb284c4b3d3.jar \

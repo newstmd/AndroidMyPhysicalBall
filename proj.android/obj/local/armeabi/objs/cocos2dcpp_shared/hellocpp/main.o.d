@@ -358,7 +358,20 @@ obj/local/armeabi/objs/cocos2dcpp_shared/hellocpp/main.o: \
  /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../deprecated/CCString.h \
  /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../deprecated/CCNotificationCenter.h \
  /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../deprecated/CCDeprecated.h \
- /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../platform/android/jni/JniHelper.h
+ /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../platform/android/jni/JniHelper.h \
+ jni/../protocols/android/PluginJniHelper.h \
+ jni/../protocols/include/AgentManager.h \
+ jni/../protocols/include/PluginManager.h \
+ jni/../protocols/include/PluginProtocol.h \
+ jni/../protocols/include/PluginParam.h \
+ jni/../protocols/include/PluginFactory.h \
+ jni/../protocols/include/ProtocolIAP.h \
+ jni/../protocols/include/ProtocolAnalytics.h \
+ jni/../protocols/include/ProtocolShare.h \
+ jni/../protocols/include/ProtocolAds.h \
+ jni/../protocols/include/ProtocolSocial.h \
+ jni/../protocols/include/ProtocolUser.h \
+ jni/../protocols/include/ProtocolPush.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -1079,3 +1092,29 @@ jni/../../Classes/AppDelegate.h:
 /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../deprecated/CCDeprecated.h:
 
 /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../platform/android/jni/JniHelper.h:
+
+jni/../protocols/android/PluginJniHelper.h:
+
+jni/../protocols/include/AgentManager.h:
+
+jni/../protocols/include/PluginManager.h:
+
+jni/../protocols/include/PluginProtocol.h:
+
+jni/../protocols/include/PluginParam.h:
+
+jni/../protocols/include/PluginFactory.h:
+
+jni/../protocols/include/ProtocolIAP.h:
+
+jni/../protocols/include/ProtocolAnalytics.h:
+
+jni/../protocols/include/ProtocolShare.h:
+
+jni/../protocols/include/ProtocolAds.h:
+
+jni/../protocols/include/ProtocolSocial.h:
+
+jni/../protocols/include/ProtocolUser.h:
+
+jni/../protocols/include/ProtocolPush.h:

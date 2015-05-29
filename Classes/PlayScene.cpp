@@ -5,6 +5,8 @@
 #include "SimpleAudioEngine.h"
 #include "PauseScene.h"
 #include "ResultScene.h"
+#include "AgentManager.h"
+using namespace anysdk::framework;
 
 
 //#define font_type "RTWSYueGoTrial-Regular"
@@ -332,9 +334,13 @@ void PlayScene::refreshRate()
         messageLabel->runAction(hecheng);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
         //iOS代码
-        if (guankashu+1 % 4 == 0) {
-            //[[CSInterstitial sharedInterstitial] loadInterstitial];
-            //[[CSInterstitial sharedInterstitial] showInterstitialWithScale:0.9f];
+        if (guankashu+1 % 3 == 0) {
+        	auto ads = AgentManager::getInstance()->getAdsPlugin();
+
+        	    if( ads && ads->isAdTypeSupported(AD_TYPE_FULLSCREEN) )
+        	    {
+        	        ads->preloadAds(AD_TYPE_FULLSCREEN);
+        	    }
         }
 
 #else

@@ -455,7 +455,19 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/PauseScene.o: \
  /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/3d/prebuilt-mk/../../ui/UILayoutComponent.h \
  /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/audio/android/prebuilt-mk/../../include/SimpleAudioEngine.h \
  /Applications/Cocos/frameworks/cocos2d-x-3.6/cocos/audio/android/prebuilt-mk/../../include/Export.h \
- jni/../../Classes/PlayScene.h jni/../../Classes/MainItem.h
+ jni/../../Classes/PlayScene.h jni/../../Classes/MainItem.h \
+ jni/../protocols/include/AgentManager.h \
+ jni/../protocols/include/PluginManager.h \
+ jni/../protocols/include/PluginProtocol.h \
+ jni/../protocols/include/PluginParam.h \
+ jni/../protocols/include/PluginFactory.h \
+ jni/../protocols/include/ProtocolIAP.h \
+ jni/../protocols/include/ProtocolAnalytics.h \
+ jni/../protocols/include/ProtocolShare.h \
+ jni/../protocols/include/ProtocolAds.h \
+ jni/../protocols/include/ProtocolSocial.h \
+ jni/../protocols/include/ProtocolUser.h \
+ jni/../protocols/include/ProtocolPush.h
 
 jni/../../Classes/PauseScene.h:
 
@@ -1372,3 +1384,27 @@ jni/../../Classes/PauseScene.h:
 jni/../../Classes/PlayScene.h:
 
 jni/../../Classes/MainItem.h:
+
+jni/../protocols/include/AgentManager.h:
+
+jni/../protocols/include/PluginManager.h:
+
+jni/../protocols/include/PluginProtocol.h:
+
+jni/../protocols/include/PluginParam.h:
+
+jni/../protocols/include/PluginFactory.h:
+
+jni/../protocols/include/ProtocolIAP.h:
+
+jni/../protocols/include/ProtocolAnalytics.h:
+
+jni/../protocols/include/ProtocolShare.h:
+
+jni/../protocols/include/ProtocolAds.h:
+
+jni/../protocols/include/ProtocolSocial.h:
+
+jni/../protocols/include/ProtocolUser.h:
+
+jni/../protocols/include/ProtocolPush.h:

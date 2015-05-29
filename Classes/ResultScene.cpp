@@ -8,6 +8,8 @@
 
 #include "ResultScene.h"
 #include "PlayScene.h"
+#include "AgentManager.h"
+using namespace anysdk::framework;
 #define font_type "YuppySC-Regular"
 
 Scene* ResultScene::createScene()
@@ -123,16 +125,13 @@ bool ResultScene::init()
     UserDefault::getInstance()->setIntegerForKey(Key_TotalScore, 0);
     UserDefault::getInstance()->flush();
     
+    auto ads = AgentManager::getInstance()->getAdsPlugin();
 
-    
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    //iOS代码
-    //[[CSMoreGame sharedMoreGame] loadMoreGame];
-    //[[CSMoreGame sharedMoreGame] showMoreGameWithScale:0.9f];
+        if( ads && ads->isAdTypeSupported(AD_TYPE_MOREAPP) )
+        {
+            ads->showAds(AD_TYPE_MOREAPP);
+        }
 
-#else
-    //Android代码
-#endif
 
     
     return true;

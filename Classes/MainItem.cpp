@@ -10,6 +10,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "PlayScene.h"
+#include "AgentManager.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 //iOS代码
@@ -28,7 +29,7 @@
 //#include "PGStoreKitManager.h"
 USING_NS_CC_MATH;
 USING_NS_CC;
-
+using namespace anysdk::framework;
 using namespace cocostudio::timeline;
 
 Scene* MainItemScene::createScene()
@@ -50,7 +51,13 @@ bool MainItemScene::init()
     //button_1.addTouchEventListener(cocos2d::ui::SEL_TouchEvent(newGameCallBack) );
     //addChild(rootNode);
     //添加背景
-    
+//    std::string appKey = "BC26F841-OOOO-OOOO-OOOO-OOOOOOOOOOOO";
+//    std::string appSecret = "1dff378a8f254ecOOOOOOOOOOOOO";
+//    std::string privateKey = "696064B29E9A0OOOOOOOOOOOOO";
+//    std::string oauthLoginServer = "http://oauth.anysdk.com/api/OauthLoginDemo/Login.php";
+
+    //AgentManager::getInstance()->init(appKey,appSecret,privateKey,oauthLoginServer);
+    //log("初始化ID完成");
     //id auth = PGStoreKitManager::getInstance();
     //    [auth authenticateLocalPlayer];
     
@@ -113,7 +120,15 @@ bool MainItemScene::init()
     CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("nekomimi.mp3",true);
     
     
-    
+    auto ads = AgentManager::getInstance()->getAdsPlugin();
+
+    if( ads && ads->isAdTypeSupported(AD_TYPE_BANNER) )
+    {
+    	log("准备显示BANNER");
+        ads->showAds(AD_TYPE_BANNER);
+        log("BANNER显示出来了");
+    }
+
     
     return true;
 }

@@ -26,8 +26,46 @@ THE SOFTWARE.
 ****************************************************************************/
 package org.cocos2dx.cpp;
 
+import com.anysdk.framework.PluginWrapper;
+
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
+
+import android.content.Intent;
+import android.os.Bundle;
+
+//public class AppActivity extends Cocos2dxActivity {
 public class AppActivity extends Cocos2dxActivity {
+    protected void onCreate(Bundle savedState)
+    {
+        super.onCreate(savedState);
+        PluginWrapper.init(this); // for plugins
+        PluginWrapper.setGLSurfaceView(Cocos2dxGLSurfaceView.getInstance());
+        
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        PluginWrapper.onActivityResult(requestCode, resultCode, data);
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        PluginWrapper.onResume();
+    }
+    @Override
+    public void onPause(){
+        PluginWrapper.onPause();
+        super.onPause();
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        PluginWrapper.onNewIntent(intent);
+        super.onNewIntent(intent);
+    }
+ 
+    
 	
 }

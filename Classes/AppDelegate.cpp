@@ -1,13 +1,10 @@
 #include "AppDelegate.h"
 #include "MainItem.h"
-#include "ResultScene.h"
-//#include "NCSGameCenter.h"
-//#include "UMSocial.h"
-//#include "ChanceAd.h"
-//#include ""
-//#include "ChanceAd.h"
+#include "AgentManager.h"
+//#include "ResultScene.h"
+#include "../../protocols/include/AgentManager.h"
 USING_NS_CC;
-
+using namespace anysdk::framework;
 AppDelegate::AppDelegate() {
 
 }
@@ -29,13 +26,16 @@ void AppDelegate::initGLContextAttrs()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
-    
-    
-    //MOBCLICKCPP_START_WITH_APPKEY("556279e967e58ebe7e004aee");
-    //NCSGameCenter *sGameCenter = [NCSGameCenter sharedGameCenter];
-    
-    
-    //MOBCLICKCPP_START_WITH_APPKEY_AND_CHANNEL("556279e967e58ebe7e004aee", "asdfadfa");
+	log("初始化ANYSDK代码");
+	std::string appKey = "A2952517-9471-8C7E-9E6B-8776DEE841B2";
+	std::string appSecret = "53f5a211696bc2f7b8bd1967137220c4";
+	std::string privateKey = "598A8AB6287D7F8783CF160980D40251";
+	std::string oauthLoginServer = "http://oauth.anysdk.com/api/OauthLoginDemo/Login.php";
+
+	AgentManager::getInstance()->init(appKey,appSecret,privateKey,oauthLoginServer);
+	log("初始化ANYSDK代码结束");
+	AgentManager::getInstance()->loadALLPlugin();
+
     
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();

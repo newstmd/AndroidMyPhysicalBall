@@ -11,10 +11,11 @@
 #include "ui/CocosGUI.h"
 #include "PlayScene.h"
 #include "MainItem.h"
+#include "AgentManager.h"
 //#include "ChanceAd.h"
 USING_NS_CC_MATH;
 USING_NS_CC;
-
+using namespace anysdk::framework;
 using namespace cocostudio::timeline;
 
 Scene* PauseScene::createScene()
@@ -119,14 +120,12 @@ bool PauseScene::init()
         }
     });
     
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    //iOS代码
-    //[[CSInterstitial sharedInterstitial] loadInterstitial];
-    //[[CSInterstitial sharedInterstitial] showInterstitialWithScale:0.9f];
+    auto ads = AgentManager::getInstance()->getAdsPlugin();
 
-#else
-    //Android代码
-#endif
+    if( ads && ads->isAdTypeSupported(AD_TYPE_FULLSCREEN) )
+        {
+            ads->showAds(AD_TYPE_FULLSCREEN);
+        }
 
     return true;
 }
